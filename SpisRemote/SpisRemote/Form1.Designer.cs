@@ -45,54 +45,58 @@ namespace SpisRemote
             this.label3 = new System.Windows.Forms.Label();
             this.Notatki = new System.Windows.Forms.Label();
             this.Obrazek = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Adres = new System.Windows.Forms.Button();
-            this.textAdres = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Obrazek)).BeginInit();
             this.SuspendLayout();
             // 
             // NazwaS
             // 
-            this.NazwaS.Location = new System.Drawing.Point(579, 86);
+            this.NazwaS.Location = new System.Drawing.Point(772, 106);
+            this.NazwaS.Margin = new System.Windows.Forms.Padding(4);
             this.NazwaS.Name = "NazwaS";
-            this.NazwaS.Size = new System.Drawing.Size(264, 20);
+            this.NazwaS.Size = new System.Drawing.Size(351, 22);
             this.NazwaS.TabIndex = 0;
             // 
             // ZadanieS
             // 
-            this.ZadanieS.Location = new System.Drawing.Point(579, 129);
+            this.ZadanieS.Location = new System.Drawing.Point(772, 159);
+            this.ZadanieS.Margin = new System.Windows.Forms.Padding(4);
             this.ZadanieS.Name = "ZadanieS";
-            this.ZadanieS.Size = new System.Drawing.Size(264, 20);
+            this.ZadanieS.Size = new System.Drawing.Size(351, 22);
             this.ZadanieS.TabIndex = 1;
             // 
             // NumerS
             // 
-            this.NumerS.Location = new System.Drawing.Point(579, 174);
+            this.NumerS.Location = new System.Drawing.Point(772, 214);
+            this.NumerS.Margin = new System.Windows.Forms.Padding(4);
             this.NumerS.Name = "NumerS";
-            this.NumerS.Size = new System.Drawing.Size(264, 20);
+            this.NumerS.Size = new System.Drawing.Size(351, 22);
             this.NumerS.TabIndex = 2;
             // 
             // dataS
             // 
-            this.dataS.Location = new System.Drawing.Point(579, 224);
+            this.dataS.Location = new System.Drawing.Point(772, 276);
+            this.dataS.Margin = new System.Windows.Forms.Padding(4);
             this.dataS.Name = "dataS";
-            this.dataS.Size = new System.Drawing.Size(264, 20);
+            this.dataS.Size = new System.Drawing.Size(351, 22);
             this.dataS.TabIndex = 3;
             // 
             // StatkiLista
             // 
             this.StatkiLista.FormattingEnabled = true;
-            this.StatkiLista.Location = new System.Drawing.Point(12, 64);
+            this.StatkiLista.ItemHeight = 16;
+            this.StatkiLista.Location = new System.Drawing.Point(16, 15);
+            this.StatkiLista.Margin = new System.Windows.Forms.Padding(4);
             this.StatkiLista.Name = "StatkiLista";
-            this.StatkiLista.Size = new System.Drawing.Size(179, 147);
+            this.StatkiLista.Size = new System.Drawing.Size(237, 244);
             this.StatkiLista.TabIndex = 4;
             this.StatkiLista.SelectedIndexChanged += new System.EventHandler(this.StatkiLista_SelectedIndexChanged);
             // 
             // WczytajB
             // 
-            this.WczytajB.Location = new System.Drawing.Point(213, 64);
+            this.WczytajB.Location = new System.Drawing.Point(284, 15);
+            this.WczytajB.Margin = new System.Windows.Forms.Padding(4);
             this.WczytajB.Name = "WczytajB";
-            this.WczytajB.Size = new System.Drawing.Size(75, 23);
+            this.WczytajB.Size = new System.Drawing.Size(100, 28);
             this.WczytajB.TabIndex = 6;
             this.WczytajB.Text = "Wczytaj";
             this.WczytajB.UseVisualStyleBackColor = true;
@@ -101,9 +105,10 @@ namespace SpisRemote
             // ZapiszB
             // 
             this.ZapiszB.Enabled = false;
-            this.ZapiszB.Location = new System.Drawing.Point(213, 187);
+            this.ZapiszB.Location = new System.Drawing.Point(284, 78);
+            this.ZapiszB.Margin = new System.Windows.Forms.Padding(4);
             this.ZapiszB.Name = "ZapiszB";
-            this.ZapiszB.Size = new System.Drawing.Size(75, 23);
+            this.ZapiszB.Size = new System.Drawing.Size(100, 28);
             this.ZapiszB.TabIndex = 7;
             this.ZapiszB.Text = "Zapisz";
             this.ZapiszB.UseVisualStyleBackColor = true;
@@ -112,9 +117,10 @@ namespace SpisRemote
             // UsunB
             // 
             this.UsunB.Enabled = false;
-            this.UsunB.Location = new System.Drawing.Point(213, 109);
+            this.UsunB.Location = new System.Drawing.Point(284, 134);
+            this.UsunB.Margin = new System.Windows.Forms.Padding(4);
             this.UsunB.Name = "UsunB";
-            this.UsunB.Size = new System.Drawing.Size(75, 23);
+            this.UsunB.Size = new System.Drawing.Size(100, 28);
             this.UsunB.TabIndex = 8;
             this.UsunB.Text = "Usun";
             this.UsunB.UseVisualStyleBackColor = true;
@@ -122,9 +128,10 @@ namespace SpisRemote
             // 
             // NowyB
             // 
-            this.NowyB.Location = new System.Drawing.Point(213, 152);
+            this.NowyB.Location = new System.Drawing.Point(284, 187);
+            this.NowyB.Margin = new System.Windows.Forms.Padding(4);
             this.NowyB.Name = "NowyB";
-            this.NowyB.Size = new System.Drawing.Size(75, 23);
+            this.NowyB.Size = new System.Drawing.Size(100, 28);
             this.NowyB.TabIndex = 9;
             this.NowyB.Text = "Nowy";
             this.NowyB.UseVisualStyleBackColor = true;
@@ -132,17 +139,17 @@ namespace SpisRemote
             // 
             // NotatkiS
             // 
-            this.NotatkiS.Location = new System.Drawing.Point(13, 250);
+            this.NotatkiS.Location = new System.Drawing.Point(17, 308);
+            this.NotatkiS.Margin = new System.Windows.Forms.Padding(4);
             this.NotatkiS.Multiline = true;
             this.NotatkiS.Name = "NotatkiS";
-            this.NotatkiS.Size = new System.Drawing.Size(549, 132);
+            this.NotatkiS.Size = new System.Drawing.Size(731, 162);
             this.NotatkiS.TabIndex = 10;
             // 
             // rozpiska
             // 
             this.rozpiska.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.rozpiska.Location = new System.Drawing.Point(579, 253);
-            this.rozpiska.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.rozpiska.Location = new System.Drawing.Point(772, 311);
             this.rozpiska.Name = "rozpiska";
             this.rozpiska.ShowWeekNumbers = true;
             this.rozpiska.TabIndex = 12;
@@ -152,82 +159,53 @@ namespace SpisRemote
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(579, 63);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(772, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 13;
             this.label1.Text = "Nazwa Statku";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(581, 110);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(775, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "Tytuł case\'a";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(584, 154);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(778, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "Numer AX";
             // 
             // Notatki
             // 
             this.Notatki.AutoSize = true;
-            this.Notatki.Location = new System.Drawing.Point(12, 224);
-            this.Notatki.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Notatki.Location = new System.Drawing.Point(16, 276);
             this.Notatki.Name = "Notatki";
-            this.Notatki.Size = new System.Drawing.Size(41, 13);
+            this.Notatki.Size = new System.Drawing.Size(52, 17);
             this.Notatki.TabIndex = 16;
             this.Notatki.Text = "Notatki";
             // 
             // Obrazek
             // 
-            this.Obrazek.Location = new System.Drawing.Point(354, 12);
-            this.Obrazek.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Obrazek.Location = new System.Drawing.Point(472, 15);
             this.Obrazek.Name = "Obrazek";
-            this.Obrazek.Size = new System.Drawing.Size(139, 141);
+            this.Obrazek.Size = new System.Drawing.Size(185, 174);
             this.Obrazek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Obrazek.TabIndex = 11;
             this.Obrazek.TabStop = false;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // Adres
-            // 
-            this.Adres.Location = new System.Drawing.Point(213, 13);
-            this.Adres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Adres.Name = "Adres";
-            this.Adres.Size = new System.Drawing.Size(75, 19);
-            this.Adres.TabIndex = 17;
-            this.Adres.Text = "Adres";
-            this.Adres.UseVisualStyleBackColor = true;
-            this.Adres.Click += new System.EventHandler(this.Adres_Click);
-            // 
-            // textAdres
-            // 
-            this.textAdres.Location = new System.Drawing.Point(15, 12);
-            this.textAdres.Name = "textAdres";
-            this.textAdres.Size = new System.Drawing.Size(176, 20);
-            this.textAdres.TabIndex = 18;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 431);
-            this.Controls.Add(this.textAdres);
-            this.Controls.Add(this.Adres);
+            this.ClientSize = new System.Drawing.Size(1175, 531);
             this.Controls.Add(this.Notatki);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -244,6 +222,7 @@ namespace SpisRemote
             this.Controls.Add(this.NumerS);
             this.Controls.Add(this.ZadanieS);
             this.Controls.Add(this.NazwaS);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Obrazek)).EndInit();
@@ -270,9 +249,6 @@ namespace SpisRemote
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Notatki;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button Adres;
-        private System.Windows.Forms.TextBox textAdres;
     }
 }
 

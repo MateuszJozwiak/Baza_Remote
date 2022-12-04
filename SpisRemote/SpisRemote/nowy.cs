@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace SpisRemote
 {
-    class nowy
+    class NewVessel
     {
-        public string adres;
-        public nowy(string adres)
+        public NewVessel()
         {
-            this.adres = adres;
             DateTime now = DateTime.Now;
-            System.IO.File.AppendAllText(adres,$"__;__;0000;{now};wypelnij mnie|");
+            System.IO.File.AppendAllText(BaseAddress.AddresPulpit, $"\n__;__;0000;{now};wypelnij mnie");
         }
     }
 }

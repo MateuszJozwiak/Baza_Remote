@@ -1,39 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace SpisRemote
 {
-    class wczytaj
+    class Read
     {
-        public string adres;
-        public wczytaj()
+        internal VesselList[] wczytywacz()
         {
-            adres = adresy.Adres;
+        List<VesselList> dane = new List<VesselList>();
+        string[] BazaDanych = File.ReadAllLines(BaseAddress.AddresPulpit);
+                foreach (string LinijkaWBazie in BazaDanych)
+                {
+                    if (String.IsNullOrEmpty(LinijkaWBazie))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                     string[] porcjaBazaDanych = LinijkaWBazie.Split(';');
+                     var statek = new VesselList(porcjaBazaDanych[0], porcjaBazaDanych[1], Convert.ToInt32(porcjaBazaDanych[2]), Convert.ToDateTime(porcjaBazaDanych[3]), porcjaBazaDanych[4]);
+                     dane.Add(statek);
+                    }
+                }
+                return dane.ToArray();
         }
-
-        public ListaStatkow[] wczytywacz()
-        {
-        List<ListaStatkow> dane = new List<ListaStatkow>();
-            string[] dane2 = System.IO.File.ReadAllText(adres).Split('|');
-        foreach(string x in dane2)
-            {
-                if (x=="")
-                {
-                    continue;
-                }
-                else
-                {
-                    string[] porcja = x.Split(';');
-                    ListaStatkow statek = new ListaStatkow(porcja[0], porcja[1], Convert.ToInt32(porcja[2]), Convert.ToDateTime(porcja[3]), porcja[4]);
-                    dane.Add(statek);
-                }
-
-            }
-            return dane.ToArray();
-    }
     }
 }

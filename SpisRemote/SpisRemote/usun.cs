@@ -9,25 +9,23 @@ namespace SpisRemote
 {
     class usun
     {
-        public int indeks;
-        public string adres;
+        private int indeks;
         public usun(int indeks)
         {
             this.indeks = indeks;
-            adres = adresy.Adres;
         }
         public void usuwacz()
         {
-            wczytaj nowy = new wczytaj();
-            ListaStatkow[] po = nowy.wczytywacz();
-            File.WriteAllText(adres, "");
+            var NewShip = new Read();
+            VesselList[] po = NewShip.wczytywacz();
+            File.WriteAllText(BaseAddress.AddresPulpit, "");
             for (int i = 0; i < po.Length; i++)
             {
 
                 if (i == indeks)
                     continue;
                 else
-                    System.IO.File.AppendAllText(adres, $"{po[i].statek};{po[i].zadanie};{Convert.ToString(po[i].numer)};{Convert.ToString(po[i].data)};{po[i].notatki}|");
+                    System.IO.File.AppendAllText(BaseAddress.AddresPulpit, $"\n{po[i].Statek};{po[i].Zadanie};{Convert.ToString(po[i].Numer)};{Convert.ToString(po[i].Data)};{po[i].Notatki}");
             }
         }
     }

@@ -7,44 +7,26 @@ using System.Threading.Tasks;
 
 namespace SpisRemote
 {
-    class zapisz
+    class Save : VesselList
     {
         /// <summary>
         /// Klasa ma na celu zapisywanie zmian w wybranym wierszu statku
         /// </summary>
         /// <remarks>
         /// czysci plik tekstowy ktory jest baza danych i nadpisuje go od nowa z tym ze zaznaczony wiersz pobiera dany z WinForm
-        public string statek;
-        public string zadanie;
-        public int numer;
-        public DateTime data;
-        public string notatki;
-        public int indeks;
-        public string adres;
-        public zapisz(string statek, string zadanie, int numer, DateTime data, string notatki, int indeks)
+        private int indeks;
+        public Save(string statek, string zadanie, int numer, DateTime data, string notatki, int indeks) : base (statek, zadanie, numer, data, notatki)
         {
-            this.statek = statek;
-            this.zadanie = zadanie;
-            this.numer = numer;
-            DateTime now = DateTime.Now;
-            if (DateTime.Compare(data,now)>=0)  // usawienie daty na minimum obecna 
-                this.data = data;
-            else
-                data = now;
-            this.data = data;
-            this.notatki = notatki;
-            this.indeks = indeks;
-            adres = adresy.Adres;
-            wczytaj nowy = new wczytaj();
-            ListaStatkow[] po = nowy.wczytywacz();
-            File.WriteAllText(adres, "");
-            for (int i = 0; i < po.Length; i++)
+            var NewShip = new Read();
+            VesselList[] ZbiorStatkow = NewShip.wczytywacz();
+            File.WriteAllText(BaseAddress.AddresPulpit, "");
+            for (int i = 0; i < ZbiorStatkow.Length; i++)
             {
 
                 if (i == indeks)
-                    System.IO.File.AppendAllText(adres, $"{statek};{zadanie};{Convert.ToInt32(numer)};{Convert.ToDateTime(data)};{notatki}|");
+                    File.AppendAllText(BaseAddress.AddresPulpit, $"\n{statek};{zadanie};{Convert.ToInt32(numer)};{Convert.ToDateTime(data)};{notatki}");
                 else
-                    System.IO.File.AppendAllText(adres, $"{po[i].statek};{po[i].zadanie};{Convert.ToString(po[i].numer)};{Convert.ToString(po[i].data)};{po[i].notatki}|");
+                    File.AppendAllText(BaseAddress.AddresPulpit, $"\n{ZbiorStatkow[i].Statek};{ZbiorStatkow[i].Zadanie};{Convert.ToString(ZbiorStatkow[i].Numer)};{Convert.ToString(ZbiorStatkow[i].Data)};{ZbiorStatkow[i].Notatki}");
             }
         }
     }
